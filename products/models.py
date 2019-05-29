@@ -9,7 +9,7 @@ class Product(models.Model):
     date_updated = models.DateTimeField(_('updated'), auto_now=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ('-date_added',)
 
     def __str__(self):
         return self.name
