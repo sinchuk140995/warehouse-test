@@ -10,3 +10,11 @@ class ProductList(generics.ListCreateAPIView):
     """
     queryset = models.Product.objects.all()
     serializer_class = serializers.ProductSerializer
+
+
+class ProductDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    View for retrieving, updating or deleting a product.
+    """
+    queryset = models.Product.objects.all()
+    serializer_class = serializers.ProductSerializer
